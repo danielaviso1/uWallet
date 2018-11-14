@@ -33,6 +33,17 @@
         android:textColorHint="#666"
         android:id="@+id/edPassword"
         android:textColor="#FFFFFF"
+        android:password="true"
+        />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Password"
+        android:id="@+id/chkShow"
+        android:onClick="ShowPassword"
+        android:textColor="#FFFFFF"
+        android:buttonTint="#FFFFFF"
         />
 
     <LinearLayout
@@ -61,6 +72,8 @@
             android:textColor="#FFFFFF"
             android:layout_weight="1"
             android:layout_marginLeft="2dp"
+            android:onClick="Exit"
+            android:id="@+id/btnExit"
             />
     </LinearLayout>
 

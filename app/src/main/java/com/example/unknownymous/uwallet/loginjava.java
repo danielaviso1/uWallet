@@ -4,14 +4,17 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class loginjava extends Activity {
-    Button btnLogin;
+    Button btnLogin,btnExit;
     EditText edUsername,edPassword;
+    CheckBox chkShow;
     validationdb helper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +25,12 @@ public class loginjava extends Activity {
 
     public void init(){
         btnLogin = (Button)findViewById(R.id.btnLogin);
+        btnExit = (Button)findViewById(R.id.btnExit);
 
         edUsername = (EditText)findViewById(R.id.edUsername);
         edPassword = (EditText)findViewById(R.id.edPassword);
+
+        chkShow = (CheckBox)findViewById(R.id.chkShow);
     }
 
     public void Login(View view){
@@ -60,6 +66,28 @@ public class loginjava extends Activity {
 
 
         }
+        edUsername.setText("");
+        edPassword.setText("");
         helper.close();
+    }
+
+    public void ShowPassword(View view)
+    {
+        if(chkShow.isChecked())
+        {
+            edPassword.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
+
+        else
+        {
+            edPassword.setInputType(129);
+        }
+    }
+
+    public void Exit(View view)
+    {
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
     }
 }
