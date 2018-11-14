@@ -4,10 +4,6 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-    <uses-sdk
-        android:minSdkVersion="19"
-        android:targetSdkVersion="19" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,6 +38,14 @@
         <activity android:name=".transactionjava">
             <intent-filter>
                 <action android:name=".transactionjava" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".trdetailsjava">
+            <intent-filter>
+                <action android:name=".trdetailsjava" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

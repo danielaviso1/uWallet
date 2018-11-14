@@ -1,6 +1,7 @@
 package com.example.unknownymous.uwallet;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -26,14 +27,15 @@ public class transactionjava extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         // TODO Auto-generated method stub
         super.onListItemClick(l, v, position, id);
-        if(position == 1)
+        if(position == 1000)
         {
 
         }
 
         else
         {
-
+            Intent intent = new Intent(this, trdetailsjava.class);
+            this.startActivity(intent);
         }
     }
 
