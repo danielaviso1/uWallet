@@ -31,4 +31,14 @@
         android:id="@+id/btnOpen"
         android:onClick="Open"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#666"
+        android:text="See Transactions"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="200dp"
+        android:id="@+id/btnTransactions"
+        android:onClick="Transactions"/>
+
 </LinearLayout>

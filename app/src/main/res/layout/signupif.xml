@@ -70,14 +70,16 @@
         android:layout_height="wrap_content"
         android:hint="Username"
         android:textColorHint="#666"
-        android:id="@+id/SignUsername"/>
+        android:id="@+id/SignUsername"
+        android:textColor="#FFFFFF"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:textColorHint="#666"
-        android:id="@+id/SignPassword"/>
+        android:id="@+id/SignPassword"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:layout_width="match_parent"

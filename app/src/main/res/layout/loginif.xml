@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#000000"
-    android:padding="40dp"
-    tools:context=".MainActivity">
+    android:padding="40dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -25,6 +22,7 @@
         android:hint="Username"
         android:textColorHint="#666"
         android:id="@+id/edUsername"
+        android:textColor="#FFFFFF"
         />
 
     <EditText
@@ -34,6 +32,7 @@
         android:hint="Password"
         android:textColorHint="#666"
         android:id="@+id/edPassword"
+        android:textColor="#FFFFFF"
         />
 
     <LinearLayout

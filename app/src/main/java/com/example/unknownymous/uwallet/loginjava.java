@@ -52,11 +52,13 @@ public class loginjava extends Activity {
                     this.startActivity(intent);
                 }
 
-                else
+                else if(a == x-1)
                 {
                     Toast.makeText(this, "Incorrect Username or Password", Toast.LENGTH_LONG).show();
                 }
             }
+
+
         }
         helper.close();
     }
