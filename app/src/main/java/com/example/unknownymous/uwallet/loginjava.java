@@ -3,18 +3,21 @@ package com.example.unknownymous.uwallet;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class loginjava extends Activity {
     Button btnLogin,btnExit;
     EditText edUsername,edPassword;
     CheckBox chkShow;
+    TextView txtWallet;
     validationdb helper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,10 @@ public class loginjava extends Activity {
         edPassword = (EditText)findViewById(R.id.edPassword);
 
         chkShow = (CheckBox)findViewById(R.id.chkShow);
+
+        txtWallet = (TextView) findViewById(R.id.txtWallet);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/WetArial-Regular.otf");
+        txtWallet.setTypeface(typeface);
     }
 
     public void Login(View view){
