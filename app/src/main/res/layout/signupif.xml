@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:hint="Private Key"
         android:textColorHint="#666"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:id="@+id/SignPrivateKey"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -30,7 +31,8 @@
         android:layout_height="wrap_content"
         android:hint="Public Key"
         android:textColorHint="#666"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:id="@+id/SignPublicKey"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -43,13 +45,16 @@
         android:layout_height="wrap_content"
         android:hint="Nem Address"
         android:textColorHint="#666"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:id="@+id/SignNemAddress"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#666"
-        android:text="Generate Key"/>
+        android:text="Generate Key"
+        android:id="@+id/SignGenerate"
+        android:onClick="Generate"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -64,20 +69,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
-        android:textColorHint="#666"/>
+        android:textColorHint="#666"
+        android:id="@+id/SignUsername"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:textColorHint="#666"/>
+        android:textColorHint="#666"
+        android:id="@+id/SignPassword"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#666"
         android:text="Register"
-        android:id="@+id/btnRegister"
-        android:onClick="Register"/>
+        android:id="@+id/SignRegister"
+        android:onClick="Register" />
 
 </LinearLayout>
