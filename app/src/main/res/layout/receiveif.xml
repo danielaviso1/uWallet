@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp"
+    android:id="@+id/qrinterface"
+    tools:context="com.example.unknownymous.uwallet.qrreceivejava">
+
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="480px"
+        android:id="@+id/svCamera"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/svCamera"
+        android:id="@+id/txtResult"
+        android:text="@string/result_text_default"
+        android:gravity="center"/>
+
+</RelativeLayout>

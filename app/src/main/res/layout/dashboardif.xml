@@ -20,7 +20,8 @@
         android:text="500 000000 Xem"
         android:textColor="#FFFFFF"
         android:gravity="center"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:id="@+id/txtMoney"/>
 
     <Button
         android:layout_width="match_parent"
@@ -31,13 +32,45 @@
         android:id="@+id/btnOpen"
         android:onClick="Open"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:background="#666"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:layout_marginRight="2dp"
+            android:id="@+id/btnSend"
+            android:onClick="Send"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receive"
+            android:background="#666"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:onClick="Receive"
+            android:id="@+id/btnReceive"
+            />
+    </LinearLayout>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#666"
         android:text="See Transactions"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/btnTransactions"
         android:onClick="Transactions"/>
 

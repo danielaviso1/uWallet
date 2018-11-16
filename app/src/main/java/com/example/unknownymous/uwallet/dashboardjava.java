@@ -2,12 +2,17 @@ package com.example.unknownymous.uwallet;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class dashboardjava extends Activity {
-    Button btnOpen,btnTransactions;
+    Button btnOpen,btnTransactions,btnReceive;
+    EditText edSendAmount;
+    TextView txtMoney;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboardif);
@@ -18,11 +23,23 @@ public class dashboardjava extends Activity {
     {
         btnOpen = (Button)findViewById(R.id.btnOpen);
         btnTransactions = (Button)findViewById(R.id.btnTransactions);
+        btnReceive = (Button)findViewById(R.id.btnReceive);
+
+        edSendAmount = (EditText)findViewById(R.id.edSendAmount);
+
+        txtMoney = (TextView)findViewById(R.id.txtMoney);
     }
 
     public void Open(View view)
     {
+        Intent i = new Intent(this, qrreceivejava.class);
+        startActivity(i);
+    }
 
+    public void Receive(View view)
+    {
+        txtMoney.setText(getIntent().getStringExtra("EXTRA_SESSION_ID"));
+        txtMoney.setTextColor(Color.parseColor("#FFFFFF"));
     }
 
     public void Transactions(View view)

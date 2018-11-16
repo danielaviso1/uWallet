@@ -38,6 +38,11 @@ public class signupjava extends Activity {
         chkShow = (CheckBox)findViewById(R.id.chkShow);
     }
 
+    public void Generate(View view)
+    {
+
+    }
+
     public void Register(View view) {
         String usern, passw;
         usern = SignUsername.getText().toString();
