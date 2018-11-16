@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -110,10 +111,15 @@ public class qrreceivejava extends Activity {
                         public void run() {
                             Vibrator vibrator = (Vibrator)getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
                             vibrator.vibrate(2000);
-                            txtResult.setText(qrcodes.valueAt(0).displayValue);
+
+                            String result = qrcodes.valueAt(0).displayValue;
+
+                            txtResult.setText(result);
+
+                            Log.d("QR VALUE:", result);
                             String data = "800 000000 Xem";
                             Intent intent = new Intent(getBaseContext(), dashboardjava.class);
-                            intent.putExtra("EXTRA_SESSION_ID", data);
+                            intent.putExtra("EXTRA_SESSION_ID", result);
                             startActivity(intent);
                         }
                     });

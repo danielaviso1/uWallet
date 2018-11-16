@@ -69,7 +69,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".qrsendjava">
+        <activity android:name=".qrsendjava"
+            android:theme="@style/Theme.AppCompat" >
             <intent-filter>
                 <action android:name=".qrsendjava" />
 
